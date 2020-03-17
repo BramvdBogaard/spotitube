@@ -6,7 +6,32 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8009979-dd20-4703-954f-d639b9c66380" name="Default Changelist" comment="" />
+    <list default="true" id="c8009979-dd20-4703-954f-d639b9c66380" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/spotitube_v2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/api/Playlists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/api/Playlists.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/api/Tracks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/api/Tracks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dao/ITrackDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dao/ITrackDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dao/PlaylistDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dao/PlaylistDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dao/TrackDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dao/TrackDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/domain/LocalStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/domain/LocalStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spotitube_v2.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spotitube/api/Playlists.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spotitube/api/Playlists.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spotitube/api/Tracks.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spotitube/api/Tracks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spotitube/dao/ITrackDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spotitube/dao/ITrackDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spotitube/dao/PlaylistDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spotitube/dao/PlaylistDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spotitube/dao/TrackDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spotitube/dao/TrackDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spotitube/domain/LocalStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spotitube/domain/LocalStorage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spotitube_v2.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/spotitube_v2.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spotitube_v2/WEB-INF/classes/spotitube/api/Playlists.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spotitube_v2/WEB-INF/classes/spotitube/api/Playlists.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spotitube_v2/WEB-INF/classes/spotitube/api/Tracks.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spotitube_v2/WEB-INF/classes/spotitube/api/Tracks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spotitube_v2/WEB-INF/classes/spotitube/dao/ITrackDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spotitube_v2/WEB-INF/classes/spotitube/dao/ITrackDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spotitube_v2/WEB-INF/classes/spotitube/dao/TrackDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spotitube_v2/WEB-INF/classes/spotitube/dao/TrackDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spotitube_v2/WEB-INF/classes/spotitube/domain/LocalStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spotitube_v2/WEB-INF/classes/spotitube/domain/LocalStorage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/spotitube_v2.kotlin_module" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +62,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -52,6 +80,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1YhaRJBKxOIoR8TPzebJpLovfx3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -59,9 +88,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../herkansing spotitube/jurian/Spotitube/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -280,6 +310,7 @@
       <workItem from="1584099069029" duration="5869000" />
       <workItem from="1584115370674" duration="2258000" />
       <workItem from="1584285584438" duration="369000" />
+      <workItem from="1584470790677" duration="4289000" />
     </task>
     <servers />
   </component>
@@ -291,11 +322,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1584003852347" />
-    <state x="718" y="155" key="#com.intellij.ide.util.MemberChooser" timestamp="1584116193456">
+    <state x="718" y="155" key="#com.intellij.ide.util.MemberChooser" timestamp="1584483818994">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1584100187352" />
-    <state x="718" y="155" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1584116193456" />
+    <state x="718" y="155" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1584483818994" />
     <state x="489" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584004385188">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -308,66 +339,66 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583918032432" />
-    <state width="1293" height="291" key="GridCell.Tab.0.bottom" timestamp="1584285955284">
+    <state width="1293" height="291" key="GridCell.Tab.0.bottom" timestamp="1584484372914">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="218" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584105106254" />
-    <state width="1293" height="291" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584285955284" />
-    <state width="1293" height="291" key="GridCell.Tab.0.center" timestamp="1584285955284">
+    <state width="1293" height="291" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584484372914" />
+    <state width="1293" height="291" key="GridCell.Tab.0.center" timestamp="1584484372913">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="218" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584105106254" />
-    <state width="1293" height="291" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584285955284" />
-    <state width="1293" height="291" key="GridCell.Tab.0.left" timestamp="1584285955284">
+    <state width="1293" height="291" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584484372913" />
+    <state width="1293" height="291" key="GridCell.Tab.0.left" timestamp="1584484372913">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="218" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584105106254" />
-    <state width="1293" height="291" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584285955284" />
-    <state width="1293" height="291" key="GridCell.Tab.0.right" timestamp="1584285955284">
+    <state width="1293" height="291" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584484372913" />
+    <state width="1293" height="291" key="GridCell.Tab.0.right" timestamp="1584484372913">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="218" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584105106254" />
-    <state width="1293" height="291" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584285955284" />
-    <state width="1293" height="291" key="GridCell.Tab.1.bottom" timestamp="1584285955284">
+    <state width="1293" height="291" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584484372913" />
+    <state width="1293" height="291" key="GridCell.Tab.1.bottom" timestamp="1584484372914">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="218" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584105106255" />
-    <state width="1293" height="291" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584285955284" />
-    <state width="1293" height="291" key="GridCell.Tab.1.center" timestamp="1584285955284">
+    <state width="1293" height="291" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584484372914" />
+    <state width="1293" height="291" key="GridCell.Tab.1.center" timestamp="1584484372914">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="218" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1584105106254" />
-    <state width="1293" height="291" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584285955284" />
-    <state width="1293" height="291" key="GridCell.Tab.1.left" timestamp="1584285955284">
+    <state width="1293" height="291" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584484372914" />
+    <state width="1293" height="291" key="GridCell.Tab.1.left" timestamp="1584484372914">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="218" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1584105106254" />
-    <state width="1293" height="291" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584285955284" />
-    <state width="1293" height="291" key="GridCell.Tab.1.right" timestamp="1584285955284">
+    <state width="1293" height="291" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584484372914" />
+    <state width="1293" height="291" key="GridCell.Tab.1.right" timestamp="1584484372914">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="218" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1584105106255" />
-    <state width="1293" height="291" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584285955284" />
-    <state width="1293" height="291" key="GridCell.Tab.2.bottom" timestamp="1584285955284">
+    <state width="1293" height="291" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584484372914" />
+    <state width="1293" height="291" key="GridCell.Tab.2.bottom" timestamp="1584484372915">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="218" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584105106255" />
-    <state width="1293" height="291" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584285955284" />
-    <state width="1293" height="291" key="GridCell.Tab.2.center" timestamp="1584285955284">
+    <state width="1293" height="291" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584484372915" />
+    <state width="1293" height="291" key="GridCell.Tab.2.center" timestamp="1584484372915">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="218" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1584105106255" />
-    <state width="1293" height="291" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584285955284" />
-    <state width="1293" height="291" key="GridCell.Tab.2.left" timestamp="1584285955284">
+    <state width="1293" height="291" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584484372915" />
+    <state width="1293" height="291" key="GridCell.Tab.2.left" timestamp="1584484372915">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="218" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1584105106255" />
-    <state width="1293" height="291" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584285955284" />
-    <state width="1293" height="291" key="GridCell.Tab.2.right" timestamp="1584285955284">
+    <state width="1293" height="291" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584484372915" />
+    <state width="1293" height="291" key="GridCell.Tab.2.right" timestamp="1584484372915">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="218" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1584105106255" />
-    <state width="1293" height="291" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584285955284" />
+    <state width="1293" height="291" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584484372915" />
     <state x="299" y="68" key="Maven.ArtifactSearchDialog" timestamp="1583485920154">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

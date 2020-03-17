@@ -4,10 +4,7 @@ import spotitube.domain.Track;
 
 import javax.annotation.Resource;
 import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class TrackDAO implements ITrackDAO {
@@ -15,27 +12,73 @@ public class TrackDAO implements ITrackDAO {
     DataSource dataSource;
 
     @Override
-    public ArrayList<Track> getAllTracksNotInPlaylist(int playlistId) {
+    public ArrayList<Track> getAllTracksNotInPlaylist(int playlistId, boolean playlistHasTracks) {
+        ArrayList<Track> tracks = new ArrayList<>();
+
         try (Connection connection = dataSource.getConnection()){
-            ArrayList<Track> tracks = new ArrayList<>();
-            String sql = "SELECT pt.playlistId, pt.trackId, t.title\n" +
-                    "FROM PlaylistsTracks pt INNER JOIN Tracks t ON pt.trackId != t.id\n" +
-                    "WHERE pt.playlistId = ?\n" +
-                    "ORDER BY pt.trackId";
+
+            //TODO: FIX SQL STRING FOR PLAYLISTS WITH TRACKS! (SHOULD GET ALL TRACKS NOT CURRENTLY IN PLAYLIST)
+            String sql = playlistHasTracks
+                    ? ""
+                    : "select * from Tracks";
+
             PreparedStatement statement = connection.prepareStatement(sql);
-            statement.setInt(1, playlistId);
+//            statement.setInt(1, playlistId);
             ResultSet resultset = statement.executeQuery();
 
-            //TODO: Add track to list and return list (after query is fixed)
-//            while (resultset.next()) {
-//                Track track = new Track();
-//            }
+            while (resultset.next()) {
+                Track t = new Track();
+                t.setId(resultset.getInt("id"));
+                t.setTitle(resultset.getString("title"));
+                t.setPerformer(resultset.getString("performer"));
+                t.setDuration(resultset.getInt("duration"));
+                t.setAlbum(resultset.getString("album"));
+                t.setPlaycount(resultset.getInt("playcount"));
+                t.setPublicationDate(resultset.getString("publicationDate"));
+                t.setDescription(resultset.getString("description"));
+                t.setOfflineAvailable(resultset.getBoolean("offlineAvailable"));
 
+                tracks.add(t);
+            }
+            return tracks;
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        return null;
+        return tracks;
+    }
+
+    @Override
+    public ArrayList<Track> getAllTracksInPlaylist(int playlistId) {
+        ArrayList<Track> tracks = new ArrayList<>();
+        try (Connection connection = dataSource.getConnection()){
+            String sql = "SELECT t.id, t.title, t.performer, t.duration, t.album, t.playcount, t.publicationDate, t.description, t.offlineAvailable\n" +
+                    "FROM Playlists p INNER JOIN PlaylistsTracks pt ON p.id = pt.playlistId INNER JOIN Tracks t ON pt.trackId = t.id\n" +
+                    "WHERE p.id = ?";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setInt(1, playlistId);
+            ResultSet resultSet = statement.executeQuery();
+
+            while(resultSet.next()) {
+                Track t = new Track();
+                t.setId(resultSet.getInt("id"));
+                t.setTitle(resultSet.getString("title"));
+                t.setPerformer(resultSet.getString("performer"));
+                t.setDuration(resultSet.getInt("duration"));
+                t.setAlbum(resultSet.getString("album"));
+                t.setPlaycount(resultSet.getInt("playcount"));
+                t.setPublicationDate(resultSet.getString("publicationDate"));
+                t.setDescription(resultSet.getString("description"));
+                t.setOfflineAvailable(resultSet.getBoolean("offlineAvailable"));
+
+                tracks.add(t);
+            }
+            return tracks;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return tracks;
     }
 }

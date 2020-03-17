@@ -19,6 +19,9 @@ public class Playlists {
     private IPlaylistDAO playlistDAO;
     private HashMap<Integer, Playlist> playlists = new HashMap<>();
 
+    @Inject
+    private LocalStorage localStorage;
+
     @GET
     @Path("playlists")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -28,6 +31,9 @@ public class Playlists {
         HashMap<Integer, Playlist> playlistsWithoutTracks = playlistDAO.getAllPlaylistsWithoutTracks();
 
         playlists.putAll(playlistsWithoutTracks);
+
+        //set localstorage
+        localStorage.setPlaylistsHashmap(playlists);
 
         if (playlists == null) {
             return Response.status(404).build();

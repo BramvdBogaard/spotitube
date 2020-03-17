@@ -107,7 +107,6 @@ public class PlaylistDAO implements IPlaylistDAO {
 
     @Override
     public void deletePlaylist(int id, boolean hasTracks) {
-        //TODO: Delete only works on projects that have tracks!!
         try (Connection connection = dataSource.getConnection()) {
             String sql;
 

@@ -7,10 +7,11 @@ import java.util.List;
 public class LocalStorage {
     private static List<User> usersList = new ArrayList<>();
     private static String currentUser;
-    private HashMap<Integer, Playlist> playlistsHashmap = new HashMap<>();
+
+    private static HashMap<Integer, Playlist> playlistsHashmap = new HashMap<>();
 
     public HashMap<Integer, Playlist> getPlaylistsHashmap() {
-        return playlistsHashmap;
+        return this.playlistsHashmap;
     }
 
     public void setPlaylistsHashmap(HashMap<Integer, Playlist> playlistsHashmap) {

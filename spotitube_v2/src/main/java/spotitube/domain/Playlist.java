@@ -49,7 +49,6 @@ public class Playlist {
         this.tracks.add(track);
     }
 
-    //TODO: implement getDuration method, calculate there
     public int getTotalDurationOfPlaylist() {
         tracks.forEach(track -> totalPlayTime += track.getDuration());
         return totalPlayTime;

@@ -11,11 +11,11 @@ public class LocalStorage {
     private static HashMap<Integer, Playlist> playlistsHashmap = new HashMap<>();
 
     public HashMap<Integer, Playlist> getPlaylistsHashmap() {
-        return this.playlistsHashmap;
+        return playlistsHashmap;
     }
 
     public void setPlaylistsHashmap(HashMap<Integer, Playlist> playlistsHashmap) {
-        this.playlistsHashmap = playlistsHashmap;
+        LocalStorage.playlistsHashmap = playlistsHashmap;
     }
 
     public static User getUser(String token) {

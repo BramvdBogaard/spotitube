@@ -38,7 +38,7 @@ public class User {
             int n = rand.nextInt(9999) + 1000;
             token += "-" + n;
         }
-        token = token.substring(1, token.length());
+        token = token.substring(1);
         return token;
     }
 

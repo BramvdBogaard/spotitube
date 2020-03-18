@@ -61,7 +61,7 @@ public class Playlists {
     @Produces(MediaType.APPLICATION_JSON)
     public Response deletePlaylist(@PathParam("id") int id) {
         //TODO: refactor code for testing, should throw errors etc.
-        //TODO: getAllPlaylists is called because the playlists hashmap is empty otherwise, fix this
+        //TODO: getAllPlaylists is called because the playlists hashmap is empty otherwise, fix this by using localstorage
         getAllPlaylists();
         Playlist selectedPlaylist = playlists.get(id);
 

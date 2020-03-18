@@ -14,6 +14,9 @@ public class PlaylistDAO implements IPlaylistDAO {
     @Resource(name = "jdbc/spotitube")
     DataSource dataSource;
 
+    //TODO: onderzoeken of superklasse DAO beste is voor localstorage checks.
+    //TODO: EERST TESTS VOOR DAO LAAG VOOR AANPASSEN LOCALSTORAGE
+
     @Override
     public HashMap<Integer, Playlist> getAllPlaylists() {
         HashMap<Integer, Playlist> playlists = new HashMap<>();
@@ -64,6 +67,9 @@ public class PlaylistDAO implements IPlaylistDAO {
     public HashMap<Integer, Playlist> getAllPlaylistsWithoutTracks() {
         HashMap<Integer, Playlist> playlists = new HashMap<>();
         try (Connection connection = dataSource.getConnection()) {
+
+            //TODO: Check LocalStorage, return and don't use query
+
             String sql = "select p.id, p.name, p.owner\n" +
                     "from playlists p INNER JOIN PlaylistsTracks pt ON pt.playlistId != p.id\n" +
                     "GROUP BY p.id";

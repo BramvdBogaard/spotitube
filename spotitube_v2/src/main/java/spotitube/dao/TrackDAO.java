@@ -19,11 +19,20 @@ public class TrackDAO implements ITrackDAO {
 
             //TODO: FIX SQL STRING FOR PLAYLISTS WITH TRACKS! (SHOULD GET ALL TRACKS NOT CURRENTLY IN PLAYLIST)
             String sql = playlistHasTracks
-                    ? ""
+                    ? "SELECT *\n" +
+                    "FROM Tracks t\n" +
+                    "WHERE t.id NOT IN (SELECT t.id\n" +
+                    "FROM PlaylistsTracks pt INNER JOIN Tracks t ON pt.trackId = t.id\n" +
+                    "WHERE pt.playlistId = ?\n" +
+                    "GROUP BY pt.trackId)"
                     : "select * from Tracks";
 
             PreparedStatement statement = connection.prepareStatement(sql);
-//            statement.setInt(1, playlistId);
+
+            if (playlistHasTracks) {
+                statement.setInt(1, playlistId);
+            }
+
             ResultSet resultset = statement.executeQuery();
 
             while (resultset.next()) {

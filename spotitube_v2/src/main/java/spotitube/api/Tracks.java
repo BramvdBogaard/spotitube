@@ -1,5 +1,6 @@
 package spotitube.api;
 
+import spotitube.api.dto.AddTrackToPlaylistDTO;
 import spotitube.api.dto.TracksDTO;
 import spotitube.dao.ITrackDAO;
 import spotitube.domain.LocalStorage;
@@ -10,6 +11,7 @@ import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -65,6 +67,19 @@ public class Tracks {
         return Response.status(200).entity(tracksDTO).build();
     }
 
+    @POST
+    @Path("playlists/{id}/tracks")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response addTrackToPlaylist(@PathParam("id") int id, AddTrackToPlaylistDTO trackObject) {
+        //TODO: Offlineavailable isn't set. What is the best way to edit the track ??
+
+        //TODO: ZIT ER EEN FOUT IN DE FRONTEND? NA HET TOEVOEGEN VAN EEN TRACK WORDT DE TOTALE SPEELTIJD NIET MEER WEERGEGEVEN TERWIJL DIT WEL IN DE RESPONSE ZIT
+
+        trackDAO.addTrackToPlaylist(id, trackObject.id, trackObject.offlineAvailable);
+        //TODO: Use localstorage for storing tracks too
+        return getAllAvailableTracks(id);
+    }
 
     @Inject
     public void setTrackDAO(ITrackDAO trackDAO) {

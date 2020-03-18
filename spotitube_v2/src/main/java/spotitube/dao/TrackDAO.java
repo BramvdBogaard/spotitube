@@ -17,7 +17,6 @@ public class TrackDAO implements ITrackDAO {
 
         try (Connection connection = dataSource.getConnection()){
 
-            //TODO: FIX SQL STRING FOR PLAYLISTS WITH TRACKS! (SHOULD GET ALL TRACKS NOT CURRENTLY IN PLAYLIST)
             String sql = playlistHasTracks
                     ? "SELECT *\n" +
                     "FROM Tracks t\n" +
@@ -89,5 +88,20 @@ public class TrackDAO implements ITrackDAO {
             e.printStackTrace();
         }
         return tracks;
+    }
+
+    @Override
+    public void addTrackToPlaylist(int playlistId, int trackId, boolean offlineAvailable) {
+        try (Connection connection = dataSource.getConnection()) {
+            String sql = "INSERT INTO PlaylistsTracks VALUES (? , ?)";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setInt(1, playlistId);
+            statement.setInt(2, trackId);
+
+            statement.execute();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

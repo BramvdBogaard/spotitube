@@ -11,7 +11,6 @@ import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -27,6 +26,8 @@ public class Tracks {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAllAvailableTracks(@QueryParam("forPlaylist") int playlistId) {
+
+        //todo: Update localstorage!
         HashMap<Integer, Playlist> allPlaylists = localStorage.getPlaylistsHashmap();
         ArrayList<Track> tracks = new ArrayList<>();
 
@@ -79,6 +80,16 @@ public class Tracks {
         trackDAO.addTrackToPlaylist(id, trackObject.id, trackObject.offlineAvailable);
         //TODO: Use localstorage for storing tracks too
         return getAllAvailableTracks(id);
+    }
+
+    @DELETE
+    @Path("playlists/{playlistId}/tracks/{trackId}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response deleteTrackFromPlaylist(@PathParam("playlistId") int playlistId, @PathParam("trackId") int trackId) {
+        trackDAO.deleteTrackFromPlaylist(playlistId, trackId);
+
+        return getAllTracksInPlaylist(playlistId);
     }
 
     @Inject

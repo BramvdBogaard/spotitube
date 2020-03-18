@@ -104,4 +104,18 @@ public class TrackDAO implements ITrackDAO {
             e.printStackTrace();
         }
     }
+
+    @Override
+    public void deleteTrackFromPlaylist(int playlistId, int trackId) {
+        try (Connection connection = dataSource.getConnection()) {
+            String sql = "DELETE FROM PlaylistsTracks WHERE playlistId = ? AND trackId = ?";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setInt(1, playlistId);
+            statement.setInt(2, trackId);
+
+            statement.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

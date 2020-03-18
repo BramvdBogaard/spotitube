@@ -10,4 +10,6 @@ public interface ITrackDAO {
     ArrayList<Track> getAllTracksInPlaylist(int playlistId);
 
     void addTrackToPlaylist(int playlistId, int trackId, boolean offlineAvailable);
+
+    void deleteTrackFromPlaylist(int playlistId, int trackId);
 }

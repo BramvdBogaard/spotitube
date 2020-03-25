@@ -19,7 +19,6 @@ public class Playlists {
     private IPlaylistDAO playlistDAO;
     private HashMap<Integer, Playlist> playlists = new HashMap<>();
 
-    @Inject
     private LocalStorage localStorage;
 
     @GET
@@ -70,6 +69,7 @@ public class Playlists {
         }
 
         playlistDAO.deletePlaylist(id, true);
+
         return getAllPlaylists();
 
     }
@@ -117,4 +117,7 @@ public class Playlists {
     public void setPlaylistDAO(IPlaylistDAO playlistDAO) {
         this.playlistDAO = playlistDAO;
     }
+
+    @Inject
+    public void setLocalStorage(LocalStorage localStorage) { this.localStorage = localStorage; }
 }

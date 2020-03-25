@@ -14,8 +14,6 @@ public class PlaylistDAO implements IPlaylistDAO {
     @Resource(name = "jdbc/spotitube")
     DataSource dataSource;
 
-    //TODO: onderzoeken of superklasse DAO beste is voor localstorage checks.
-    //TODO: EERST TESTS VOOR DAO LAAG VOOR AANPASSEN LOCALSTORAGE
 
     @Override
     public HashMap<Integer, Playlist> getAllPlaylists() {
@@ -153,5 +151,9 @@ public class PlaylistDAO implements IPlaylistDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public void setDataSource(DataSource dataSource) {
+        this.dataSource = dataSource;
     }
 }

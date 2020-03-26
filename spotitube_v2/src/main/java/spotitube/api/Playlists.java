@@ -29,14 +29,14 @@ public class Playlists {
         playlists = playlistDAO.getAllPlaylists();
         HashMap<Integer, Playlist> playlistsWithoutTracks = playlistDAO.getAllPlaylistsWithoutTracks();
 
+        if (playlists == null) {
+            return Response.status(404).build();
+        }
+
         playlists.putAll(playlistsWithoutTracks);
 
         //set localstorage
         localStorage.setPlaylistsHashmap(playlists);
-
-        if (playlists == null) {
-            return Response.status(404).build();
-        }
 
         AllPlaylistsPlusTotalPlaytimeDTO allPlaylistsDTO = new AllPlaylistsPlusTotalPlaytimeDTO();
 
@@ -59,8 +59,6 @@ public class Playlists {
     @Path("playlists/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response deletePlaylist(@PathParam("id") int id) {
-        //TODO: refactor code for testing, should throw errors etc.
-        //TODO: getAllPlaylists is called because the playlists hashmap is empty otherwise, fix this by using localstorage
         getAllPlaylists();
         Playlist selectedPlaylist = playlists.get(id);
 

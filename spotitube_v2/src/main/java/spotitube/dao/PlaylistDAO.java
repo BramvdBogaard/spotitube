@@ -66,8 +66,6 @@ public class PlaylistDAO implements IPlaylistDAO {
         HashMap<Integer, Playlist> playlists = new HashMap<>();
         try (Connection connection = dataSource.getConnection()) {
 
-            //TODO: Check LocalStorage, return and don't use query
-
             String sql = "select p.id, p.name, p.owner\n" +
                     "from playlists p INNER JOIN PlaylistsTracks pt ON pt.playlistId != p.id\n" +
                     "GROUP BY p.id";

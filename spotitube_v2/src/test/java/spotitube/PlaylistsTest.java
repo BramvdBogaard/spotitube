@@ -1,15 +1,12 @@
 package spotitube;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import spotitube.api.Playlists;
 import spotitube.api.dto.AddPlaylistDTO;
 import spotitube.api.dto.AllPlaylistsPlusTotalPlaytimeDTO;
 import spotitube.api.dto.PlayListDTO;
-import spotitube.api.dto.UserLoginRequest;
 import spotitube.dao.IPlaylistDAO;
-import spotitube.dao.IUserDAO;
 import spotitube.domain.LocalStorage;
 import spotitube.domain.Playlist;
 import spotitube.domain.Track;
@@ -23,11 +20,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
 public class PlaylistsTest {
-    private static Playlists playlistsApi;
+    private static Playlists playlistsApi = new Playlists();
     private static HashMap<Integer, Playlist> playlists = new HashMap<>();
 
-    @BeforeAll
-    public static void setup() {
+    @BeforeEach
+    public void setup() {
         Playlist playlist = new Playlist();
         playlist.setOwner("testOwner");
         playlist.setId(1);
@@ -67,7 +64,7 @@ public class PlaylistsTest {
     @Test
     public void getTotalPlaytimeOfAllPlaylistsTest() {
         int actualPlaytime = playlistsApi.getTotalPlaytimeOfAllPlaylists(playlists);
-        assertEquals(150, actualPlaytime);
+        assertEquals(250, actualPlaytime);
     }
 
     @Test
@@ -85,12 +82,11 @@ public class PlaylistsTest {
         AllPlaylistsPlusTotalPlaytimeDTO allPlaylistsPlusTotalPlaytimeDTO = (AllPlaylistsPlusTotalPlaytimeDTO) response.getEntity();
 
         assertEquals(200, response.getStatus());
-        assertEquals(2, allPlaylistsPlusTotalPlaytimeDTO.playlists.size());
+        assertEquals(1, allPlaylistsPlusTotalPlaytimeDTO.playlists.size());
     }
 
     @Test
     public void playlistsNotFoundTest() {
-        //TODO: Fix nullpointerException ASAP
         //Mock
         IPlaylistDAO playlistDAO = mock(IPlaylistDAO.class);
         LocalStorage localStorage = mock(LocalStorage.class);
@@ -118,6 +114,13 @@ public class PlaylistsTest {
         playlistsDTO.length = 0;
         playlistsDTO.playlists = new ArrayList<>();
 
+        Playlist playlist = new Playlist();
+        playlist.setOwner("testOwner");
+        playlist.setId(1);
+        playlist.setName("playlist1");
+
+        when(playlists.get(1)).thenReturn(playlist);
+        doNothing().when(localStorage).setPlaylistsHashmap(playlists);
         //actual test
         Response response = playlistsApi.deletePlaylist(1);
         AllPlaylistsPlusTotalPlaytimeDTO allPlaylistsPlusTotalPlaytimeDTO = (AllPlaylistsPlusTotalPlaytimeDTO) response.getEntity();
@@ -140,7 +143,15 @@ public class PlaylistsTest {
         addPlaylistDTO.id = 2;
         addPlaylistDTO.owner = true;
 
+        User user = new User();
+        user.setToken("1234");
+        user.setUsername("bram");
+        user.setPassword("password1234");
+
         //actual
+        //TODO: Compleet andere functie wordt hier aangeroepen zonder reden.
+//        when(localStorage.getUser("1234")).thenReturn(user);
+
         Response response = playlistsApi.addPlaylist("1234", addPlaylistDTO);
         AllPlaylistsPlusTotalPlaytimeDTO playlistDTO = (AllPlaylistsPlusTotalPlaytimeDTO) response.getEntity();
 
@@ -149,10 +160,29 @@ public class PlaylistsTest {
         assertEquals(150, playlistDTO.length);
 
     }
-//
-//    @Test
-//    public void editPlaylistNameTest() {
-//
-//    }
+
+    @Test
+    public void editPlaylistNameTest() {
+        //mock
+        LocalStorage localStorage = mock(LocalStorage.class);
+        IPlaylistDAO playlistDAO = mock(IPlaylistDAO.class);
+        String newPlaylistName = "playlistTestEditPlaylist";
+
+        PlayListDTO playListDTO = new PlayListDTO();
+        playListDTO.id = 1;
+        playListDTO.name = newPlaylistName;
+        playListDTO.owner = "bram";
+        playListDTO.tracks = new ArrayList<Track>();
+
+        //actual test
+        playlistsApi.setLocalStorage(localStorage);
+        playlistsApi.setPlaylistDAO(playlistDAO);
+
+//        when(playlistDAO.editPlaylist(playListDTO)).then(playlists.get(1).setName(newPlaylistName));
+        //TODO: naam niet geupdatet
+        Response response = playlistsApi.editPlaylistName(playListDTO);
+        assertEquals(200, response.getStatus());
+        assertEquals(newPlaylistName, playlists.get(1).getName());
+    }
 
 }

@@ -26,7 +26,6 @@ public class Playlists {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAllPlaylists() {
-        //TODO: doesn't return playtime after each call (length = 0)!
         playlists = playlistDAO.getAllPlaylists();
         HashMap<Integer, Playlist> playlistsWithoutTracks = playlistDAO.getAllPlaylistsWithoutTracks();
 
@@ -36,7 +35,6 @@ public class Playlists {
 
         playlists.putAll(playlistsWithoutTracks);
 
-        //set localstorage
         localStorage.setPlaylistsHashmap(playlists);
 
         AllPlaylistsPlusTotalPlaytimeDTO allPlaylistsDTO = new AllPlaylistsPlusTotalPlaytimeDTO();
@@ -117,4 +115,5 @@ public class Playlists {
 
     @Inject
     public void setLocalStorage(LocalStorage localStorage) { this.localStorage = localStorage; }
+
 }

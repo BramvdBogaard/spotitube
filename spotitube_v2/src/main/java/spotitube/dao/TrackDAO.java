@@ -118,4 +118,8 @@ public class TrackDAO implements ITrackDAO {
             e.printStackTrace();
         }
     }
+
+    public void setDataSource(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
 }

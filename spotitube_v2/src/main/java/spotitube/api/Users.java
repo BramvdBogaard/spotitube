@@ -15,6 +15,7 @@ import javax.ws.rs.core.Response;
 public class Users {
 
     private IUserDAO userDAO;
+    private LocalStorage localStorage;
 
     @POST
     @Path("login")
@@ -35,4 +36,7 @@ public class Users {
     public void setUserDAO(IUserDAO userDAO) {
         this.userDAO = userDAO;
     }
+
+    @Inject
+    public void setLocalStorage(LocalStorage localStorage) { this.localStorage = localStorage; }
 }

@@ -17,6 +17,7 @@ import java.util.HashMap;
 @Path("")
 public class Tracks {
     private ITrackDAO trackDAO;
+
     private LocalStorage localStorage;
 
     @GET

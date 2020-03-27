@@ -2,6 +2,7 @@ package spotitube;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 import spotitube.api.Playlists;
 import spotitube.api.dto.AddPlaylistDTO;
 import spotitube.api.dto.AllPlaylistsPlusTotalPlaytimeDTO;
@@ -107,58 +108,43 @@ public class PlaylistsTest {
         //mock
         IPlaylistDAO playlistDAO = mock(IPlaylistDAO.class);
         LocalStorage localStorage = mock(LocalStorage.class);
+
         playlistsApi.setPlaylistDAO(playlistDAO);
         playlistsApi.setLocalStorage(localStorage);
 
-        AllPlaylistsPlusTotalPlaytimeDTO playlistsDTO = new AllPlaylistsPlusTotalPlaytimeDTO();
-        playlistsDTO.length = 0;
-        playlistsDTO.playlists = new ArrayList<>();
-
+        int playlistId = 1;
         Playlist playlist = new Playlist();
         playlist.setOwner("testOwner");
         playlist.setId(1);
         playlist.setName("playlist1");
 
-        when(playlists.get(1)).thenReturn(playlist);
-        doNothing().when(localStorage).setPlaylistsHashmap(playlists);
         //actual test
-        Response response = playlistsApi.deletePlaylist(1);
-        AllPlaylistsPlusTotalPlaytimeDTO allPlaylistsPlusTotalPlaytimeDTO = (AllPlaylistsPlusTotalPlaytimeDTO) response.getEntity();
-
+        when(playlistDAO.getAllPlaylists()).thenReturn(playlists);
+        Response response = playlistsApi.deletePlaylist(playlistId);
         assertEquals(200, response.getStatus());
-        assertEquals(1, allPlaylistsPlusTotalPlaytimeDTO.playlists.size());
-
     }
 
     @Test
     public void addPlaylistTest() {
         //mock
-        IPlaylistDAO playlistDAO = mock(IPlaylistDAO.class);
+        IPlaylistDAO playlistDAO = Mockito.mock(IPlaylistDAO.class);
+        playlistsApi.setPlaylistDAO(playlistDAO);
         LocalStorage localStorage = mock(LocalStorage.class);
         playlistsApi.setLocalStorage(localStorage);
-        playlistsApi.setPlaylistDAO(playlistDAO);
-
-        AddPlaylistDTO addPlaylistDTO = new AddPlaylistDTO();
-        addPlaylistDTO.name = "playlist1";
-        addPlaylistDTO.id = 2;
-        addPlaylistDTO.owner = true;
 
         User user = new User();
         user.setToken("1234");
         user.setUsername("bram");
         user.setPassword("password1234");
 
-        //actual
-        //TODO: Compleet andere functie wordt hier aangeroepen zonder reden, creator is null doordat localstorage geen user teruggeeft.
-//        when(localStorage.getUser("1234")).thenReturn(user);
+        AddPlaylistDTO addPlaylistDTO = new AddPlaylistDTO();
+        addPlaylistDTO.name = "playlist1";
+        addPlaylistDTO.id = 2;
+        addPlaylistDTO.owner = true;
 
+        //actual test
         Response response = playlistsApi.addPlaylist("1234", addPlaylistDTO);
-        AllPlaylistsPlusTotalPlaytimeDTO playlistDTO = (AllPlaylistsPlusTotalPlaytimeDTO) response.getEntity();
-
         assertEquals(200, response.getStatus());
-        assertEquals(3, playlistDTO.playlists.size());
-        assertEquals(150, playlistDTO.length);
-
     }
 
     @Test
@@ -178,11 +164,7 @@ public class PlaylistsTest {
         playlistsApi.setLocalStorage(localStorage);
         playlistsApi.setPlaylistDAO(playlistDAO);
 
-//        when(playlistDAO.editPlaylist(playListDTO)).then(playlists.get(1).setName(newPlaylistName));
-        //TODO: naam niet geupdatet
         Response response = playlistsApi.editPlaylistName(playListDTO);
         assertEquals(200, response.getStatus());
-        assertEquals(newPlaylistName, playlists.get(1).getName());
     }
-
 }

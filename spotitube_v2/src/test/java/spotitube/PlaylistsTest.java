@@ -149,7 +149,7 @@ public class PlaylistsTest {
         user.setPassword("password1234");
 
         //actual
-        //TODO: Compleet andere functie wordt hier aangeroepen zonder reden.
+        //TODO: Compleet andere functie wordt hier aangeroepen zonder reden, creator is null doordat localstorage geen user teruggeeft.
 //        when(localStorage.getUser("1234")).thenReturn(user);
 
         Response response = playlistsApi.addPlaylist("1234", addPlaylistDTO);

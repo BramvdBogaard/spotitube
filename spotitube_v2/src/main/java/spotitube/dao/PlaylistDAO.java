@@ -121,6 +121,7 @@ public class PlaylistDAO implements IPlaylistDAO {
                 preparedStatement.setInt(1, id);
 
                 preparedStatement.execute();
+                return;
             }
 
             sql = "DELETE\n" +

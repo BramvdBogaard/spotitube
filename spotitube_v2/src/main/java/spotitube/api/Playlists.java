@@ -26,6 +26,7 @@ public class Playlists {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAllPlaylists() {
+        //TODO: doesn't return playtime after each call (length = 0)!
         playlists = playlistDAO.getAllPlaylists();
         HashMap<Integer, Playlist> playlistsWithoutTracks = playlistDAO.getAllPlaylistsWithoutTracks();
 
@@ -79,7 +80,6 @@ public class Playlists {
     @Consumes(MediaType.APPLICATION_JSON)
     public Response addPlaylist(@QueryParam("token") String token, AddPlaylistDTO playListDTO) {
 
-        //TODO: refactor code for testing, should throw errors etc.
         User creator = LocalStorage.getUser(token);
 
         if(creator == null || playListDTO == null) {
@@ -95,7 +95,6 @@ public class Playlists {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response editPlaylistName(PlayListDTO playListDTO) {
-        //TODO: refactor code for testing, should throw errors etc.
         playlistDAO.editPlaylist(playListDTO);
         Response allPlaylists = getAllPlaylists();
         return allPlaylists;

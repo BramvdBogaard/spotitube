@@ -7,16 +7,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8009979-dd20-4703-954f-d639b9c66380" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/spotitube/TracksTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/spotitube/DAOTests/TrackDAOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/spotitube/DAOTests/UserDAOTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/api/Playlists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/api/Playlists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/api/Tracks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/api/Tracks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dao/PlaylistDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dao/PlaylistDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spotitube/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spotitube/dao/UserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/spotitube/DAOTests/PlaylistDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/spotitube/DAOTests/PlaylistDAOTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/spotitube/PlaylistsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/spotitube/PlaylistsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/spotitube/api/Playlists.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spotitube/api/Playlists.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spotitube/api/Tracks.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spotitube/api/Tracks.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/spotitube/dao/PlaylistDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spotitube/dao/PlaylistDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spotitube/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spotitube/dao/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spotitube_v2.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/spotitube_v2.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spotitube_v2/WEB-INF/classes/spotitube/api/Playlists.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spotitube_v2/WEB-INF/classes/spotitube/api/Playlists.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spotitube_v2/WEB-INF/classes/spotitube/api/Tracks.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spotitube_v2/WEB-INF/classes/spotitube/api/Tracks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spotitube_v2/WEB-INF/classes/spotitube/dao/PlaylistDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spotitube_v2/WEB-INF/classes/spotitube/dao/PlaylistDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/spotitube/DAOTests/PlaylistDAOTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/spotitube/DAOTests/PlaylistDAOTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/spotitube/PlaylistsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/spotitube/PlaylistsTest.class" afterDir="false" />
     </list>
@@ -26,7 +31,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="61" />
+    <option name="myElementSize" value="150" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -95,80 +100,93 @@
       <recent name="C:\Users\bramv\Desktop\spotitube_2020\spotitube_v2\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PlaylistsTest">
-    <configuration name="PlaylistsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.UserDAOTest">
+    <configuration name="PlaylistDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spotitube_v2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="spotitube.*" />
+          <option name="PATTERN" value="spotitube.DAOTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="spotitube.dao.PlaylistDAO" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="spotitube" />
-      <option name="MAIN_CLASS_NAME" value="spotitube.PlaylistsTest" />
+      <option name="PACKAGE_NAME" value="spotitube.DAOTests" />
+      <option name="MAIN_CLASS_NAME" value="spotitube.DAOTests.PlaylistDAOTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TracksTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlaylistDAOTest.deletePlaylistWithTracksTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spotitube_v2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="spotitube.*" />
+          <option name="PATTERN" value="spotitube.DAOTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="spotitube" />
-      <option name="MAIN_CLASS_NAME" value="spotitube.TracksTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TracksTest.addTrackToPlaylistTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spotitube_v2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="spotitube.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="spotitube" />
-      <option name="MAIN_CLASS_NAME" value="spotitube.TracksTest" />
-      <option name="METHOD_NAME" value="addTrackToPlaylistTest" />
+      <option name="PACKAGE_NAME" value="spotitube.DAOTests" />
+      <option name="MAIN_CLASS_NAME" value="spotitube.DAOTests.PlaylistDAOTest" />
+      <option name="METHOD_NAME" value="deletePlaylistWithTracksTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TracksTest.deleteTrackFromPlaylistTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlaylistDAOTest.deletePlaylistWithoutTracks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spotitube_v2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="spotitube.*" />
+          <option name="PATTERN" value="spotitube.DAOTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="spotitube" />
-      <option name="MAIN_CLASS_NAME" value="spotitube.TracksTest" />
-      <option name="METHOD_NAME" value="deleteTrackFromPlaylistTest" />
+      <option name="PACKAGE_NAME" value="spotitube.DAOTests" />
+      <option name="MAIN_CLASS_NAME" value="spotitube.DAOTests.PlaylistDAOTest" />
+      <option name="METHOD_NAME" value="deletePlaylistWithoutTracks" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlaylistDAOTest.getAllPlaylistsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spotitube_v2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="spotitube.*" />
+          <option name="PATTERN" value="spotitube.DAOTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="spotitube" />
-      <option name="MAIN_CLASS_NAME" value="spotitube.UsersTest" />
+      <option name="PACKAGE_NAME" value="spotitube.DAOTests" />
+      <option name="MAIN_CLASS_NAME" value="spotitube.DAOTests.PlaylistDAOTest" />
+      <option name="METHOD_NAME" value="getAllPlaylistsTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spotitube_v2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spotitube.DAOTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="spotitube.dao.UserDAO" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="spotitube.DAOTests" />
+      <option name="MAIN_CLASS_NAME" value="spotitube.DAOTests.UserDAOTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -248,11 +266,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PlaylistsTest" />
-        <item itemvalue="JUnit.TracksTest" />
-        <item itemvalue="JUnit.UsersTest" />
-        <item itemvalue="JUnit.TracksTest.deleteTrackFromPlaylistTest" />
-        <item itemvalue="JUnit.TracksTest.addTrackToPlaylistTest" />
+        <item itemvalue="JUnit.UserDAOTest" />
+        <item itemvalue="JUnit.PlaylistDAOTest" />
+        <item itemvalue="JUnit.PlaylistDAOTest.deletePlaylistWithoutTracks" />
+        <item itemvalue="JUnit.PlaylistDAOTest.deletePlaylistWithTracksTest" />
+        <item itemvalue="JUnit.PlaylistDAOTest.getAllPlaylistsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -265,11 +283,6 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="TomEE Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="TomEE Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -303,7 +316,8 @@
       <workItem from="1585047522407" duration="4591000" />
       <workItem from="1585136193637" duration="10782000" />
       <workItem from="1585224439450" duration="3803000" />
-      <workItem from="1585249766292" duration="589000" />
+      <workItem from="1585249766292" duration="3228000" />
+      <workItem from="1585300956508" duration="3936000" />
     </task>
     <servers />
   </component>
@@ -311,6 +325,18 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="179" key="#Auto_Import" timestamp="1585304720590">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="179" key="#Auto_Import/0.0.1920.1040@0.0.1920.1040" timestamp="1585304720590" />
+    <state x="557" y="188" key="#PlaylistDAOTest" timestamp="1585302829735">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="557" y="188" key="#PlaylistDAOTest/0.0.1920.1040@0.0.1920.1040" timestamp="1585302829735" />
+    <state x="557" y="188" key="#UserDAOTest" timestamp="1585304901918">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="557" y="188" key="#UserDAOTest/0.0.1920.1040@0.0.1920.1040" timestamp="1585304901918" />
     <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584003852347">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -324,6 +350,10 @@
     </state>
     <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1584100187352" />
     <state x="718" y="155" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1584564351039" />
+    <state x="689" y="305" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1585304899630">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="689" y="305" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585304899630" />
     <state x="489" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584004385188">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -337,26 +367,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583918032432" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1585250098351">
+    <state width="1877" height="207" key="GridCell.Tab.0.bottom" timestamp="1585304905421">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="218" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584105106254" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585250098351" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1585250098351">
+    <state width="1877" height="207" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585304905421" />
+    <state width="1877" height="207" key="GridCell.Tab.0.center" timestamp="1585304905421">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="218" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584105106254" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585250098351" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1585250098350">
+    <state width="1877" height="207" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585304905421" />
+    <state width="1877" height="207" key="GridCell.Tab.0.left" timestamp="1585304905421">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="218" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584105106254" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585250098350" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1585250098351">
+    <state width="1877" height="207" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585304905421" />
+    <state width="1877" height="207" key="GridCell.Tab.0.right" timestamp="1585304905421">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="218" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584105106254" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585250098351" />
+    <state width="1877" height="207" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585304905421" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1585149025621">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -434,6 +464,14 @@
           </properties>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/spotitube/DAOTests/PlaylistDAOTest.java</url>
+          <line>64</line>
+          <properties class="spotitube.DAOTests.PlaylistDAOTest" method="getAllPlaylistsTest">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -447,11 +485,22 @@
     <SUITE FILE_PATH="coverage/spotitube_v2$PlaylistsTest_getAllPlaylistsTest.ic" NAME="PlaylistsTest.getAllPlaylistsTest Coverage Results" MODIFIED="1585049175963" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>spotitube.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/spotitube_v2$UserDAOTest.ic" NAME="UserDAOTest Coverage Results" MODIFIED="1585304905321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>spotitube.DAOTests.*</FILTER>
+      <FILTER>spotitube.dao.UserDAO</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/spotitube_v2$PlaylistDAOTest.ic" NAME="PlaylistDAOTest Coverage Results" MODIFIED="1585304363655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>spotitube.DAOTests.*</FILTER>
+      <FILTER>spotitube.dao.PlaylistDAO</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/spotitube_v2$UserTest_loginUserTest.ic" NAME="UserTest.loginUserTest Coverage Results" MODIFIED="1583916112221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>spotitube.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/spotitube_v2$TracksTest.ic" NAME="TracksTest Coverage Results" MODIFIED="1585228146840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>spotitube.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/spotitube_v2$PlaylistDAOTest_deletePlaylistWithTracksTest.ic" NAME="PlaylistDAOTest.deletePlaylistWithTracksTest Coverage Results" MODIFIED="1585303700398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>spotitube.DAOTests.*</FILTER>
     </SUITE>
   </component>
 </project>
